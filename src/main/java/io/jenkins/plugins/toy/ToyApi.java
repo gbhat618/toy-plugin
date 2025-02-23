@@ -1,15 +1,12 @@
 package io.jenkins.plugins.toy;
 
+import hudson.model.UnprotectedRootAction;
+import net.sf.json.JSONObject;
 import org.kohsuke.stapler.WebMethod;
 import org.kohsuke.stapler.json.JsonHttpResponse;
 import org.kohsuke.stapler.verb.GET;
 
-import net.sf.json.JSONObject;
-
-import hudson.Extension;
-import hudson.model.UnprotectedRootAction;
-
-//@Extension
+// @Extension
 public class ToyApi implements UnprotectedRootAction {
 
     @Override

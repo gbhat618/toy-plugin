@@ -1,11 +1,9 @@
 package io.jenkins.plugins.toy;
 
+import hudson.model.PeriodicWork;
 import java.util.logging.Logger;
 
-import hudson.Extension;
-import hudson.model.PeriodicWork;
-
-//@Extension
+// @Extension
 public class ToyPeriodic extends PeriodicWork {
 
     Logger LOGGER = Logger.getLogger(ToyPeriodic.class.getName());

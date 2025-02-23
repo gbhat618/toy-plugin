@@ -1,13 +1,12 @@
 package io.jenkins.plugins.toy;
 
-import org.apache.commons.lang.StringUtils;
-import org.kohsuke.stapler.DataBoundSetter;
-import org.kohsuke.stapler.QueryParameter;
-
 import hudson.Extension;
 import hudson.ExtensionList;
 import hudson.util.FormValidation;
 import jenkins.model.GlobalConfiguration;
+import org.apache.commons.lang.StringUtils;
+import org.kohsuke.stapler.DataBoundSetter;
+import org.kohsuke.stapler.QueryParameter;
 
 /**
  * Example of Jenkins global configuration.
