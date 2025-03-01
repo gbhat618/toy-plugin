@@ -1,13 +1,15 @@
 package io.jenkins.plugins.toy;
 
-import hudson.model.UnprotectedRootAction;
+import hudson.Extension;
+import hudson.model.RootAction;
+
 import net.sf.json.JSONObject;
 import org.kohsuke.stapler.WebMethod;
 import org.kohsuke.stapler.json.JsonHttpResponse;
 import org.kohsuke.stapler.verb.GET;
 
-// @Extension
-public class ToyApi implements UnprotectedRootAction {
+@Extension
+public class ToyApi implements RootAction {
 
     @Override
     public String getIconFileName() {

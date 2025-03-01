@@ -13,3 +13,6 @@ work
 .settings
 .classpath
 .project
+
+demo/*.war
+demo/jhome2

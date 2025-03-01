@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:st="jelly:stapler" xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
+        <l:layout title="Management Page">
+                <st:include it="${app}" page="sidepanel.jelly"/>
+                <l:main-panel>
+                        <h1>Toy Plugin Management Page</h1>
+                        <f:form method="post" action="configSubmit" name="config">
+                                <f:entry title="Field 1" field="field1">
+                                        <f:textbox />
+                                </f:entry>
+                                <f:entry title="Field 2" field="field2">
+                                        <f:textarea />
+                                </f:entry>
+                                <f:submit value="Submit" />
+                        </f:form>
+                </l:main-panel>
+        </l:layout>
+</j:jelly>
