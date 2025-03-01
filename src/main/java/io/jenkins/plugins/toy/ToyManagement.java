@@ -1,9 +1,10 @@
 package io.jenkins.plugins.toy;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.DataBoundSetter;
+import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.StaplerRequest2;
 import org.kohsuke.stapler.StaplerResponse2;
 import org.kohsuke.stapler.interceptor.RequirePOST;
@@ -15,11 +16,14 @@ import hudson.Extension;
 import hudson.model.Describable;
 import hudson.model.Descriptor;
 import hudson.model.ManagementLink;
+import hudson.util.FormValidation;
 import jenkins.model.Jenkins;
 
 
 @Extension
 public class ToyManagement extends ManagementLink implements Describable<ToyManagement> {
+
+    private static final Logger LOGGER = Logger.getLogger(ToyManagement.class.getName());
 
     @Override
     public String getIconFileName() {
@@ -60,21 +64,10 @@ public class ToyManagement extends ManagementLink implements Describable<ToyMana
         return field2;
     }
 
-    @DataBoundSetter
-    public void setField1(String field1) {
-        this.field1 = field1;
-    }
-
-    public void setField2(String field2) {
-        this.field2 = field2;
-    }
-
     @RequirePOST
     public void doConfigSubmit(StaplerRequest2 req, StaplerResponse2 rsp) throws IOException, ServletException {
         JSONObject form = req.getSubmittedForm();
-
-        System.out.println(form);
-
+        LOGGER.info("configuration data received: " + form);
         rsp.sendRedirect(".");
     }
 

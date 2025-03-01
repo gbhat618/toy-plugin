@@ -75,6 +75,5 @@ public class HelloWorldBuilderTest {
         WorkflowRun completedBuild = jenkins.assertBuildStatusSuccess(job.scheduleBuild2(0));
         String expectedString = "Hello, " + name + "!";
         jenkins.assertLogContains(expectedString, completedBuild);
-        Thread.sleep(600 * 1000L);
     }
 }

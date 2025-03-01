@@ -28,10 +28,24 @@
   mvn hpi:run -Djenkins.version=2.499
 ```
 
-Debug mode
+### Debug mode
 
 ```bash
   mvnDebug hpi:run
+```
+
+## Testing
+
+### Normal testing
+
+```bash
+  mvn test -Dtest=HelloWorldBuilderTest#testScriptedPipeline
+```
+
+### Debug testing
+
+```bash
+  mvn -Dmaven.surefire.debug test -Dtest=HelloWorldBuilderTest#testScriptedPipeline
 ```
 
 ### Debug Controller
